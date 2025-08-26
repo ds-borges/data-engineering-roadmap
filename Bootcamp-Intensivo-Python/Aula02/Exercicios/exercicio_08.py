@@ -7,7 +7,7 @@ print("Vamos calcular a potência de um número")
 valor_01 = int(input("Digite a base desejada: "))
 valor_02 = int(input("Digite o expoente desejado: "))
 
-# Realizando a potência do número A base sempre significa o valor que vão O número vai ser repetido
+# Realizando a potência do número a base é o valor que será repetido pela quantidade determinada do expoente
 #valor_total = valor_01 ** valor_02
 valor_total = pow(valor_01, valor_02)
 
