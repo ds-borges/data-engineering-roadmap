@@ -9,6 +9,6 @@ number_02 = float(input("Digite o segundo número da comparação: "))
 
 # Comparando os numeros
 if(number_01 == number_02):
-    print(f"Os números são iguais") 
+    print(f"Os números são iguais !!") 
 else:
-    print(f"Os números não são iguais")
+    print(f"Os números não são iguais !!!")
