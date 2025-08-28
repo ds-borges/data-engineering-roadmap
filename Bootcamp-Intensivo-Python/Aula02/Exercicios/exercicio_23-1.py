@@ -1,9 +1,20 @@
+###### Exercício 23 ######
+
+# 23: Calculadora Simples #
+
+print("Bem-vindo(a) à sua Calculadora Simples.")
+
+
 # Define a string com a expressão
-expression = (input("Qual conta iremos fazer?\n "))
+expression = (input("Por favor, digite a conta completa. Exp (2+2): "))
 
 # Usa a função eval() para calcular o valor da expressão
 try:
-    resultado = eval(expression)
-    print(f"O resultado da conta é: {resultado}")
+    if "+" in expression or "-" in expression or "*" in expression or "/" in expression:
+        print(f"O resultado da conta é: {eval(expression)}")
+    else:
+        raise ValueError("Operação matemática inválida! Encerrando.")
+
+# Captura qualquer erro
 except Exception as e:
-    print(f"Ocorreu um erro ao tentar avaliar a expressão: {e}")
+    print(f"Ocorreu um erro inesperado: {e}")
