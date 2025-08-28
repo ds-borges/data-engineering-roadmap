@@ -4,7 +4,6 @@
 
 print("Bem-vindo(a) à sua Calculadora Simples.")
 
-
 # Define a string com a expressão
 expression = (input("Por favor, digite a conta completa. Exp (2+2): "))
 
