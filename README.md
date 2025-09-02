@@ -21,11 +21,11 @@ O repositório está organizado em módulos, representando cada etapa do meu apr
 | `BoasVindas01/` | Introdução e primeiros testes com a sintaxe do Markdown. | ✅ Concluído |
 | `Aula01/` | **Conceitos Iniciais de Python:** Scripts básicos com entrada/saída de dados, variáveis e operações matemáticas simples. | ✅ Concluído |
 | `Aula02/` |  **Exercícios iniciais:** Uma coleção de 25 exercícios práticos para fixar conceitos de tipos de dados (`int`, `float`, `str`, `bool`) e estruturas de controle (`if`, `try-except`, `TypeError`, `Type Check`, `Type Conversion`). | ✅ Concluído |
-| `Aula03/` | **Exercícios de Controle de Fluxo** `DEBUG`, `IF`, `FOR`, `While`, `Listas` e `Dicionários`. | ⏳ Em Andamento |
-| `Aula04/` | **Tipos complexos e Type Hint** Dicionários vs DataFrames Vs Tabelas Vs Excel. | ⏳ Em Andamento |
-| `Aula05/` | **Projeto 01**: Leitura e Escrita de Arquivos, lendo 1 bilhão de linhas. | ⏳ Em Andamento |
-| `projeto_pandas/` | **Análise de Dados com Pandas:** Conceitos básicos de criação de um ambiente virtual para download do Pandas na versão  | ⏳ Em Andamento |
-| `projeto_streamlit/` | **Criação de Aplicações Web com Streamlit:** Conceitos básicos de criação de um ambiente virtual para download do streamlit na versão 1.48.1   |  ✅ Concluído  |
+| `Aula03/` | **Exercícios de Controle de Fluxo:** `DEBUG`, `IF`, `FOR`, `While`, `Listas` e `Dicionários`. | ⏳ Em Andamento |
+| `Aula04/` | **Tipos complexos e Type Hint:** Dicionários vs DataFrames Vs Tabelas Vs Excel. | ⏳ Em Andamento |
+| `Aula05/` | **Projeto 01:**: Leitura e Escrita de Arquivos, lendo 1 bilhão de linhas. | ⏳ Em Andamento |
+| `projeto_pandas/` | **Análise de Dados com Pandas:** Conceitos básicos de criação de um ambiente virtual para download do Pandas na versão 2.3.2. | ✅ Concluído |
+| `projeto_streamlit/` | **Criação de Aplicações Web com Streamlit:** Conceitos básicos de criação de um ambiente virtual para download do streamlit na versão 1.48.1 |  ✅ Concluído  |
 | `projeto_django/` | **Fundamentos de Desenvolvimento Web com Django:**  Conceitos básicos de criação de um ambiente virtual para download do Django na versão 5.2.5 |  ✅ Concluído  |
 
 ## 🎯 Próximos Passos no Roadmap
