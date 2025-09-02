@@ -7,7 +7,7 @@ Este repositório contém uma coleção de 25 exercícios de programação em Py
 O repositório está organizado da seguinte forma:
 
 ```
-├── Exercicios/
+|── Exercicios/
 │   ├── exercicio_01.py
 │   ├── exercicio_02.py
 │   ├── ...
