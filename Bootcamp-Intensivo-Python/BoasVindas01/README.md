@@ -2,7 +2,7 @@
 
 ## Subtítulo
 
-Este é o meu primeiro README
+Este é o meu primeiro README.md
 
 *Itálico*
 
