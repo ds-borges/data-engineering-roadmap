@@ -12,6 +12,7 @@ O repositório está organizado da seguinte forma:
 │   ├── exercicio_02.py
 │   ├── ...
 │   └── exercicio_25.py
+|── desafio.py
 └── README.md
 ```
 
@@ -69,3 +70,5 @@ Aqui está a lista completa dos 25 exercícios disponíveis neste repositório.
 23. **Calculadora Simples:** Uma calculadora que realiza as quatro operações básicas, validando as entradas do usuário.
 24. **Classificador de Números:** Classifica um número como positivo, negativo ou zero.
 25. **Conversão de Tipo com Validação:** Tenta converter uma entrada do usuário para um tipo numérico, tratando exceções se a conversão falhar.
+
+**Desafio** Refatorar exercicío da Aula 01 incluindo `try-except, `if` e `else`
