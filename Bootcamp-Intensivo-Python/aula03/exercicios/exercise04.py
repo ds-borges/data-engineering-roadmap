@@ -4,7 +4,7 @@
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
 
-print("Bem vindo ao cadastro")
+print("Bem vindo ao cadastro de usuário")
 
 try: # Inicia um bloco para capturar exceções, como a conversão de texto para número.
     name = input("Digite seu nome: ")
