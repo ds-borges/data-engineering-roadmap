@@ -20,6 +20,7 @@ Retorno:
 
 import json
 
+print("Bem vindo a validação de informações, para ajuda leia a docstring")
 log = input("Entre com as informações dos usuários: ")
 
 # Define as chaves obrigatórias em um conjunto.
