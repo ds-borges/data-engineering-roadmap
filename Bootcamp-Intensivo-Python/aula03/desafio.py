@@ -1,7 +1,7 @@
 #Desafio da aula 2
 
-right_enter=False
-while not right_enter:
+right_name=False
+while not right_name:
     try:
         #Inserção do nome
         nome = input("Digite seu nome: ") 
@@ -10,32 +10,31 @@ while not right_enter:
         if not nome:
             raise ValueError("Digite o nome do colaborador")
         else:
-            right_enter=True
+            right_name=True
     except ValueError as e:
         print(f"\nError: {e}")
 
-
-right_enter=False
-while not right_enter:
+right_wage=False
+while not right_wage:
     try:
         #Inserção do valor do salario e tipagem para float
         salario = float(input("Digite seu salario: "))
         if not salario:
             raise ValueError("Digite o salario do colaborador")
         else:
-            right_enter=True
+            right_wage=True
     except ValueError as e:
         print(f"\nErro: {e}")
 
-right_enter=False
-while not right_enter:
+right_bonus=False
+while not right_bonus:
     try:
         #Inserção do bonus para calculo do salariofinal e tipagem para float
         bonus = float(input("Digite seu bonus em %: "))
         if not bonus:
             raise ValueError("Digite o bonus do colaborador")
         else:
-            right_enter=True
+            right_bonus=True
     # Isso acontece se o usuário digitar algo que não seja diferente de número (ex: 'abc').
     except ValueError as e:
         print(f"\nErro: {e}")
