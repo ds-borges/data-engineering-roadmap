@@ -4,6 +4,9 @@ from input_valores import receiving_value
 
 
 def calcular_media(valores: list[float]) -> float:
+    """
+    Função simples que calcula uma média de valores
+    """
     return sum(valores) / len(valores)
 
 
