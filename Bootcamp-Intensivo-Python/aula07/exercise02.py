@@ -4,6 +4,11 @@ from input_valores import receiving_value
 
 
 def filtrar_acima_de(valores: list[float], limite) -> float:
+    """
+    Função simples que filtra os números acima de
+    um valor definido pelo usuário
+    """
+
     resultado = []
 
     for valor in valores:
