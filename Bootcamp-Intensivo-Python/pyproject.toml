@@ -1,0 +1,19 @@
+[project]
+name = "bootcamp-intensivo-python"
+version = "0.1.0"
+description = "Bootcamp de aprendizado de python"
+authors = [
+    {name = "ds-borges",email = "diego97sousa@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "black (>=25.1.0,<26.0.0)",
+    "isort (>=6.0.1,<7.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
