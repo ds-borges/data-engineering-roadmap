@@ -52,6 +52,6 @@ Estes são os próximos tópicos e ferramentas que planejo estudar e adicionar a
 Este repositório faz parte do bootcamp do Luciano Filho e, para os desafios e projetos relacionados, me inspirei fortemente no trabalho que ele realizou no seu roadmap de dados.
 
 Você pode conferir o repositório original e toda a estrutura usada pelo Luciano neste link:  
-[lvgalvao/Bootcamp Python para Todos ](https://github.com/lvgalvao/data-engineering-roadmap/tree/79cd29019b91c3a7e8774d15156d63a02881da54/Bootcamp%20-%20Python%20para%20dados)
+[lvgalvao/Bootcamp - Python para Todos ](https://github.com/lvgalvao/data-engineering-roadmap/tree/79cd29019b91c3a7e8774d15156d63a02881da54/Bootcamp%20-%20Python%20para%20dados)
 
 Recomendo visitar para entender melhor a organização, metodologia e o planejamento geral do bootcamp oferecido.
