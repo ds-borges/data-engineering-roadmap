@@ -14,6 +14,7 @@ lista_numeros: List[float] = []
 
 print("Bem vindo ao analisador de média!!")
 print("Avisos o analisador aceita todo tipo de números")
+print("-->Para números decimais use ponto<--\n")
 
 recebendo_numeros: List[float] = receiving_value()
 lista_numeros = calcular_media(recebendo_numeros)

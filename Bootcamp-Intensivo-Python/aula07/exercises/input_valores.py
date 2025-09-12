@@ -2,8 +2,6 @@ def receiving_value():
     """
     Função para Receber Números Do usuário e retornar como uma lista
     """
-
-    print("-->Para números decimais use ponto<--\n")
     try:
         input_user = input("Digite os números desajados: ")
 

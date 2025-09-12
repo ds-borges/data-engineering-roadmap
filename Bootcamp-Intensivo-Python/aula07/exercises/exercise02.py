@@ -19,6 +19,7 @@ def filtrar_acima_de(valores: list[float], limite) -> float:
 
 print("Bem vindo ao analisador de valores acima do limite!!")
 print("Avisos o analisador aceita todo tipo de números")
+print("-->Para números decimais use ponto<--\n")
 
 recebendo_numeros: List[float] = receiving_value()
 limite_user = int(input("Digite um valor para limite: "))
