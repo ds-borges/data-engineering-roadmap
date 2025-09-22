@@ -2,6 +2,9 @@ import time
 
 from timer import time_measure_decorator
 
+# from loguru import logger
+# from sys import stderr
+
 # Configuração do logger para stderr
 # logger.add(
 #                sink=stderr,
