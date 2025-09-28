@@ -1,0 +1,17 @@
+[project]
+name = "aula16"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "ds-borges",email = "diego97sousa@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "sqlmodel (>=0.0.25,<0.0.26)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
