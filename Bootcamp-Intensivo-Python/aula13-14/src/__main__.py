@@ -2,6 +2,7 @@ import time
 
 import schedule
 from lib.classes.CsvSource import CsvSource
+from lib.classes.DbSource import DbSource
 from lib.classes.JsonSource import JsonSource
 from lib.classes.ParquetSource import ParquetSource
 from lib.classes.TxtSource import TxtSource
@@ -15,6 +16,7 @@ def check_for_new_files():
     json_source.check_for_new_files()
     xml_source.check_for_new_files()
     parquet_source.check_for_new_files()
+    db_source.check_for_new_files()
 
 
 # Agendando a execução da função check_for_new_files() a cada segundo
@@ -25,6 +27,7 @@ txt_source = TxtSource()
 json_source = JsonSource()
 xml_source = XmlSource()
 parquet_source = ParquetSource()
+db_source = DbSource()
 
 # Executa o loop principal
 while True:
