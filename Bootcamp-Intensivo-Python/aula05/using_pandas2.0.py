@@ -34,9 +34,10 @@ Dependências:
   - pandas
 """
 
-import pandas as pd
-from multiprocessing import Pool, cpu_count
 import time
+from multiprocessing import Pool, cpu_count
+
+import pandas as pd
 
 # --- Constantes de Configuração ---
 
@@ -48,16 +49,22 @@ FILENAME = "One-Billion-Row-Challenge-Python/data/measurements.txt"
 CHUNKSIZE = 100_000_000
 
 # Otimização: Especificar os tipos de dados acelera a leitura e economiza memória.
-COLUMN_TYPES = {
-    'station': 'category',
-    'measure': 'float32'
-}
+COLUMN_TYPES = {"station": "category", "measure": "float32"}
+
 
 def process_chunk(chunk: pd.DataFrame) -> pd.DataFrame:
     """Processa um único chunk de dados para agregação parcial."""
-    # Agregação crucial: calculamos 'sum' e 'count' para podermos derivar a média correta posteriormente.
-    # ADICIONADO `observed=True` PARA REMOVER O FUTUTREWARNING E ADOTAR O COMPORTAMENTO MAIS MODERNO E EFICIENTE.
-    return chunk.groupby('station', observed=True)['measure'].agg(['min', 'max', 'sum', 'count']).reset_index()
+    # Agregação crucial: calculamos 'sum' e 'count' para
+    # podermos derivar a média correta posteriormente.
+
+    # ADICIONADO `observed=True` PARA REMOVER O FUTUTREWARNING E
+    # ADOTAR O COMPORTAMENTO MAIS MODERNO E EFICIENTE.
+    return (
+        chunk.groupby("station", observed=True)["measure"]
+        .agg(["min", "max", "sum", "count"])
+        .reset_index()
+    )
+
 
 def process_file_in_parallel(filename: str, chunksize: int) -> pd.DataFrame:
     """Orquestra a leitura e o processamento paralelo do arquivo."""
@@ -66,45 +73,56 @@ def process_file_in_parallel(filename: str, chunksize: int) -> pd.DataFrame:
     with Pool(cpu_count()) as pool:
         with pd.read_csv(
             filename,
-            sep=';',
+            sep=";",
             header=None,
-            names=['station', 'measure'],
+            names=["station", "measure"],
             chunksize=chunksize,
-            dtype=COLUMN_TYPES
+            dtype=COLUMN_TYPES,
         ) as reader:
             intermediate_results = list(pool.imap_unordered(process_chunk, reader))
 
     print("Agrupando os resultados finais de todos os processos...")
-    
+
     final_df = pd.concat(intermediate_results, ignore_index=True)
-    
+
     # Na agregação final, usamos `observed=False` para garantir que
     # todas as categorias, mesmo que ausentes em alguns chunks, sejam consideradas.
-    # No entanto, como concatenamos tudo antes, o comportamento é o mesmo e não gera warning.
-    final_aggregated = final_df.groupby('station', observed=False).agg(
-        min_measure=('min', 'min'),
-        max_measure=('max', 'max'),
-        total_sum=('sum', 'sum'),
-        total_count=('count', 'sum')
-    ).reset_index()
 
-    final_aggregated['mean_measure'] = final_aggregated['total_sum'] / final_aggregated['total_count']
-    
-    result_df = final_aggregated[['station', 'min_measure', 'mean_measure', 'max_measure']]
-    result_df = result_df.sort_values('station')
-    
+    # No entanto, como concatenamos tudo antes,
+    # o comportamento é o mesmo e não gera warning.
+    final_aggregated = (
+        final_df.groupby("station", observed=False)
+        .agg(
+            min_measure=("min", "min"),
+            max_measure=("max", "max"),
+            total_sum=("sum", "sum"),
+            total_count=("count", "sum"),
+        )
+        .reset_index()
+    )
+
+    final_aggregated["mean_measure"] = (
+        final_aggregated["total_sum"] / final_aggregated["total_count"]
+    )
+
+    result_df = final_aggregated[
+        ["station", "min_measure", "mean_measure", "max_measure"]
+    ]
+    result_df = result_df.sort_values("station")
+
     return result_df
+
 
 # --- Ponto de Entrada do Script ---
 if __name__ == "__main__":
-    
+
     print("Iniciando a execução do script...")
     start_time = time.time()
-    
+
     final_dataframe = process_file_in_parallel(FILENAME, CHUNKSIZE)
-    
+
     took = time.time() - start_time
-    
+
     print("\n--- Processamento concluído! ---")
     print("Cabeçalho do resultado:")
     print(final_dataframe.head())

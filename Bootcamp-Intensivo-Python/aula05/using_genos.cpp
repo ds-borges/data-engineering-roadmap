@@ -81,7 +81,7 @@ void merge_maps(std::unordered_map<std::string, Measurement>& main_map, const st
 double fast_stod(const char* p) {
     bool is_neg = *p == '-';
     if (is_neg) ++p;
-    
+
     int val = 0;
     if (p[1] == '.') { // Formato X.X
         val = (p[0] - '0') * 10 + (p[2] - '0');
@@ -97,7 +97,7 @@ double fast_stod(const char* p) {
  */
 void process_chunk(const char* start, const char* end, std::unordered_map<std::string, Measurement>& results) {
     const char* current = start;
-    
+
     // Tratamento de borda: avança para o início da próxima linha se o chunk começar no meio de uma.
     if (start != 0 && *(start - 1) != '\n') {
         while (current < end && *current != '\n') {
@@ -109,7 +109,7 @@ void process_chunk(const char* start, const char* end, std::unordered_map<std::s
     while (current < end) {
         const char* line_start = current;
         const char* semicolon = nullptr;
-        
+
         // Loop para encontrar o fim da linha e o ';' sem criar novas strings.
         while (current < end && *current != '\n') {
             if (*current == ';') {
@@ -121,10 +121,10 @@ void process_chunk(const char* start, const char* end, std::unordered_map<std::s
         if (semicolon) {
             std::string station(line_start, semicolon - line_start);
             double temp = fast_stod(semicolon + 1);
-            
+
             results[station].update(temp); // Atualiza o mapa de resultados LOCAL da thread.
         }
-        
+
         if (current < end) current++; // Pula o caractere '\n'
     }
 }
@@ -180,7 +180,7 @@ int main() {
     for (const auto& res : thread_results) {
         merge_maps(final_results, res);
     }
-    
+
     // --- ETAPA 4: Ordenar e imprimir ---
     std::vector<std::string> sorted_stations;
     sorted_stations.reserve(final_results.size()); // Pre-aloca memória para evitar realocações
@@ -197,7 +197,7 @@ int main() {
 
     auto end_time = std::chrono::high_resolution_clock::now(); // Para o cronômetro
     std::chrono::duration<double> elapsed = end_time - start_time;
-    
+
     // Imprime o tempo de execução no erro padrão para não poluir a saída principal
     std::cerr << "Genos Took: " << std::fixed << std::setprecision(2) << elapsed.count() << " sec" << std::endl;
 
