@@ -8,7 +8,7 @@ Instruções:
     - O programa exibirá uma lista de linguagens.
     - O usuário deve escolher o número correspondente à linguagem que deseja alterar.
     - O usuário deve fornecer o nome da nova linguagem.
-    
+
 Exemplo de Entrada/Saída:
     [Entrada]
     Escolha entre 1 e 4: 2
@@ -24,12 +24,12 @@ print(f"Essas são as linguagens atuais: {languages}")
 
 try:
     print("Vamos trocar agora")
-    remove_user=int(input(f"Escolha entre o 1 e {len(languages)}: "))
-    if remove_user < 1 or remove_user> len(languages):
+    remove_user = int(input(f"Escolha entre o 1 e {len(languages)}: "))
+    if remove_user < 1 or remove_user > len(languages):
         raise ValueError("Número fora dos limites")
-    
-    inser_user=input("Qual colocar no lugar: ")
-    languages[remove_user-1]=inser_user
+
+    inser_user = input("Qual colocar no lugar: ")
+    languages[remove_user - 1] = inser_user
 
 except ValueError as e:
     print(f"Error: {e}")

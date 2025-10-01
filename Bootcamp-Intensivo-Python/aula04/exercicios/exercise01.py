@@ -7,7 +7,7 @@ Objetivo:
 Instruções:
     - O programa cria uma lista de números inteiros de 1 a 10.
     - Ele percorre a lista e, para cada número, calcula o seu quadrado.
-    
+
 Saída Esperada:
     O programa imprimirá uma lista de 10 linhas,
     mostrando o número original e o seu valor ao quadrado.
