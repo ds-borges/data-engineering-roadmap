@@ -8,7 +8,7 @@ Este repositório reúne minhas atividades, projetos e estudos em Engenharia de 
 |-----------------------------|------------------------------------------------------------------------|--------------|
 | [Bootcamp Intensivo Python](https://github.com/ds-borges/data-engineering-roadmap/tree/f8aa6f43b3b06c263c48c7882a4256815d20f583/Bootcamp-Intensivo-Python) | Percurso completo do básico ao avançado em Python, desenvolvendo habilidades para manipulação de dados, orientação a objetos, automação, criação de APIs e integração de sistemas através de projetos práticos que conectam backend, frontend e banco de dados. | ✅ Concluído |
 | Bootcamp Intensivo SQL + DBT Core | Formação prática em SQL e dbt para transformar dados brutos em informações confiáveis, cobrindo desde consultas, modelagem, desempenho e automação até a construção de pipelines de dados modernos e testes em ambientes produtivos | ⏳ Em andamento |
-| Bootcamp de Engenharia deDados + IA | Capacitação prática para construir, orquestrar e escalar pipelines modernos de dados e inteligência artificial, cobrindo infraestrutura, automação, bancos, agentes de IA, processamento em tempo real, observabilidade, DevOps e gerenciamento de projetos ponta a ponta. | 🎯 Em breve  |
+| Workshop de Engenharia de Dados + IA | Capacitação prática para construir, orquestrar e escalar pipelines modernos de dados e inteligência artificial, cobrindo infraestrutura, automação, bancos, agentes de IA, processamento em tempo real, observabilidade, DevOps e gerenciamento de projetos ponta a ponta. | 🎯 Em breve  |
 
 ---
 
