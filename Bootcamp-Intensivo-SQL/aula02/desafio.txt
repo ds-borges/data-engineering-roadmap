@@ -1,0 +1,28 @@
+-- 1. Obter todas as colunas das tabelas Clientes, Pedidos e Fornecedores
+select c.* , o.*, s.*
+from customers c join orders o on c.customer_id = o.customer_id
+join order_details od on od.order_id = o.order_id
+join products p on p.product_id = od.product_id
+join suppliers s on s.supplier_id = p.supplier_id
+
+-- 2. Obter todos os Clientes em ordem alfabética por país e nome
+SELECT * from customers
+ORDER BY country, contact_name
+
+-- 3. Obter os 5 pedidos mais antigos
+SELECT * FROM orders
+ORDER by order_date ASC
+LIMIT 5
+
+-- 4. Obter a contagem de todos os Pedidos feitos durante 1997
+SELECT COUNT(*) as total_de_produtos FROM orders
+where order_date BETWEEN '1997-01-01' and '1997-12-31'
+
+-- 5. Obter os nomes de todas as pessoas de contato onde a pessoa é um gerente, em ordem alfabética
+SELECT contact_name from customers
+where contact_title ilike '%Manager%'
+order by contact_name asc
+
+-- 6. Obter todos os pedidos feitos em 19 de maio de 1997
+SELECT * FROM orders
+where order_date = '1997-05-19'
