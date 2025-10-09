@@ -1,0 +1,46 @@
+-- 1. Cria um relatório para todos os pedidos de 1996 e seus clientes (152 linhas)
+SELECT * from orders o join customers c
+on o.customer_id = c.customer_id
+where o.order_date >='1996-01-01' and o.order_date <'1997-01-01'
+
+-- 2. Cria um relatório que mostra o número de funcionários e clientes de cada cidade que tem funcionários (5 linhas)
+SELECT
+  e.city                                  AS city,
+  COUNT(DISTINCT e.employee_id)           AS Quantidade_funcionarios,
+  COUNT(DISTINCT c.customer_id)           AS Quantidade_clientes
+FROM employees e LEFT JOIN customers c on e.city = c.city
+GROUP BY e.city
+ORDER BY e.city;
+
+-- 3. Cria um relatório que mostra o número de funcionários e clientes de cada cidade que tem clientes (69 linhas)
+SELECT
+  c.city                                  AS city,
+  COUNT(DISTINCT e.employee_id)           AS Quantidade_funcionarios,
+  COUNT(DISTINCT c.customer_id)           AS Quantidade_clientes
+FROM employees e RIGHT JOIN customers c on e.city = c.city
+GROUP BY c.city
+ORDER BY c.city;
+
+-- 4.Cria um relatório que mostra o número de funcionários e clientes de cada cidade (71 linhas)
+SELECT COALESCE(c.city, e.city),
+  COUNT(DISTINCT e.employee_id)           AS Quantidade_funcionarios,
+  COUNT(DISTINCT c.customer_id)           AS Quantidade_clientes
+FROM employees e FULL JOIN customers c on e.city = c.city
+GROUP BY c.city ,e.city
+ORDER BY c.city ,e.city;
+
+-- 5. Cria um relatório que mostra a quantidade total de produtos encomendados.
+-- Mostra apenas registros para produtos para os quais a quantidade encomendada é menor que 200 (5 linhas)
+select p.product_id, p.product_name, sum(od.quantity) as Quantidade
+from order_details od  join products p ON p.product_id = od.product_id
+GROUP BY p.product_id, p.product_name
+HAVING SUM(od.quantity) < 200
+
+-- 6. Cria um relatório que mostra o total de pedidos por cliente desde 31 de dezembro de 1996.
+-- O relatório deve retornar apenas linhas para as quais o total de pedidos é maior que 15 (5 linhas)
+SELECT c.company_name, count(distinct o.order_id) as quantidade
+from orders o join customers c on o.customer_id = c.customer_id
+JOIN order_details od on od.order_id = o.order_id
+WHERE o.order_date > '1996-12-31'
+GROUP BY c.company_name
+HAVING count(distinct o.order_id) > 15
