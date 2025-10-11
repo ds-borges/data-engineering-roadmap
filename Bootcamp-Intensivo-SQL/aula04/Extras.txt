@@ -1,0 +1,19 @@
+---Top 3 itens por pedido por receita
+---Objetivo: para cada order_id, classificar itens por unit_price*quantity desc e retornar apenas os 3 primeiros por pedido com ROW_NUMBER().
+---Tabelas: order_details od.
+
+---PERCENT_RANK e CUME_DIST por pedido
+---Objetivo: para cada order_id, calcular percent_rank e cume_dist do total_sale dos itens, arredondando para 2 casas, para entender a distribuição no pedido.
+---Tabelas: order_details od.
+
+---Diferença de frete entre pedidos consecutivos
+---Objetivo: por customer_id, calcular freight - LAG(freight) e também LEAD(freight) em ordem de order_date, para comparar com o anterior e o próximo.
+---Tabelas: orders o.
+
+---NTILE(4) de clientes por valor total
+---Objetivo: distribuir clientes em quartis com NTILE(4) segundo o valor total comprado, listando cliente e seu quartil, tudo em uma única consulta.
+---Tabelas: orders o JOIN order_details od ON od.order_id = o.order_id JOIN customers cu ON cu.customer_id = o.customer_id.
+
+---FIRST_VALUE e LAST_VALUE do frete por cliente
+---Objetivo: por customer_id, obter o primeiro freight e o último freight na série temporal; ajustar o frame de LAST_VALUE até UNBOUNDED FOLLOWING.
+---Tabelas: orders o.
