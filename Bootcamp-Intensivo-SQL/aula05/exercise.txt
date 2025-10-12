@@ -1,0 +1,27 @@
+Relatórios de Receita
+
+    Exercício: Calcular o total de receitas no ano de 1997.
+    Objetivo: Medir a receita consolidada de um período específico para avaliação histórica de desempenho e comparação com outros anos.
+
+    Exercício: Fazer análise de crescimento mensal e calcular YTD (year-to-date).
+    Objetivo: Acompanhar a evolução mês a mês, identificar variações mensais e quantificar o acumulado no ano para monitoramento de tendência e sazonalidade.
+
+Segmentação de clientes
+
+    Exercício: Calcular o valor total já pago por cada cliente.
+    Objetivo: Identificar o valor de vida/receita por cliente para priorização de relacionamento e estratégias comerciais baseadas em valor.
+
+    Exercício: Separar clientes em 5 grupos (quintis) pelo valor pago.
+    Objetivo: Estratificar a base em faixas de valor para análises de pareto, definição de níveis de atendimento e campanhas diferenciadas.
+
+    Exercício: Selecionar apenas os clientes dos grupos 3, 4 e 5 para ações de Marketing.
+    Objetivo: Focar esforços de Marketing em clientes de média a alta contribuição, maximizando ROI de campanhas e retenção.
+
+Top 10 Produtos Mais Vendidos
+
+    Exercício: Identificar os 10 produtos com maiores vendas.
+    Objetivo: Descobrir produtos campeões de receita para orientar reposição de estoque, promoções, cross-sell e planejamento de portfólio.
+
+Clientes do Reino Unido com gasto > 1000
+    Exercício: Listar clientes do Reino Unido que pagaram mais de 1000 dólares.
+    Objetivo: Isolar um segmento geográfico de alto valor para possíveis ações de fidelização, up-sell e expansão regional.
