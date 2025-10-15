@@ -23,5 +23,6 @@ Top 10 Produtos Mais Vendidos
     Objetivo: Descobrir produtos campeões de receita para orientar reposição de estoque, promoções, cross-sell e planejamento de portfólio.
 
 Clientes do Reino Unido com gasto > 1000
+
     Exercício: Listar clientes do Reino Unido que pagaram mais de 1000 dólares.
     Objetivo: Isolar um segmento geográfico de alto valor para possíveis ações de fidelização, up-sell e expansão regional.
