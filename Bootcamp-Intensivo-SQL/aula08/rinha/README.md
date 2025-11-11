@@ -1,28 +1,69 @@
-Desafio
-Criar uma stored procedure "ver_extrato" para fornecer uma visão detalhada do extrato bancário de um cliente, incluindo seu saldo atual e as informações das últimas 10 transações realizadas. Esta operação recebe como entrada o ID do cliente e retorna uma mensagem com o saldo atual do cliente e uma lista das últimas 10 transações, contendo o ID da transação, o tipo de transação (depósito ou retirada), uma breve descrição, o valor da transação e a data em que foi realizada.
+# Desafio: Stored Procedure de Extrato Bancário
 
-Explicação Detalhada:
+Esta pasta contém a solução para um desafio de banco de dados focado na criação de uma *stored procedure* para consulta de extrato bancário. A procedure, intitulada `ver_extrato`, fornece uma visão detalhada da situação financeira de um cliente, incluindo seu saldo atual e o histórico de transações recentes.
 
-Entrada de Parâmetros:
+**Nota Importante:** Esta solução depende do ambiente Docker configurado pelo arquivo `docker-compose.yml` localizado na raiz da pasta [`aula07`](https://github.com/ds-borges/data-engineering-roadmap/tree/main/Bootcamp-Intensivo-SQL/aula07).
 
-    A stored procedure recebe o ID do cliente como parâmetro de entrada.
+## Objetivo do Desafio
 
-Obtenção do Saldo Atual:
+Criar uma *stored procedure* chamada `ver_extrato` que recebe o `ID` de um cliente como parâmetro de entrada e retorna duas informações principais:
+1.  O saldo atual do cliente.
+2.  Uma lista detalhada das suas últimas 10 transações.
 
-    É realizada uma consulta na tabela "clients" para obter o saldo atual do cliente com base no ID fornecido.
+O desafio faz parte da [rinha-de-backend-2024-q1](https://github.com/zanfranceschi/rinha-de-backend-2024-q1)
 
-Exibição do Saldo Atual:
+## Lógica da Implementação
 
-    O saldo atual do cliente é exibido por meio de uma mensagem de aviso.
+A *stored procedure* `ver_extrato` executa as seguintes operações:
 
-Obtenção das Últimas 10 Transações:
+1.  **Entrada de Parâmetros:**
+    * Recebe o `ID do cliente` como único parâmetro de entrada.
 
-    É realizada uma consulta na tabela "transactions" para obter as últimas 10 transações do cliente, ordenadas pela data de realização em ordem decrescente.
+2.  **Obtenção do Saldo Atual:**
+    * É realizada uma consulta na tabela `clients` para obter o saldo atual do cliente com base no ID fornecido.
 
-Exibição das Transações:
+3.  **Exibição do Saldo Atual:**
+    * O saldo atual do cliente é exibido por meio de uma mensagem de aviso (ex: `RAISE NOTICE` ou `PRINT`).
 
-    Utilizando um loop FOR, cada transação é iterada e suas informações são exibidas por meio de mensagens de aviso.
-    Para cada transação, são exibidos o ID da transação, o tipo de transação (depósito ou retirada), uma breve descrição da transação, o valor da transação e a data em que foi realizada.
-    O loop é interrompido após exibir as informações das últimas 10 transações.
+4.  **Obtenção das Últimas 10 Transações:**
+    * É realizada uma consulta na tabela `transactions` para obter as 10 últimas transações do cliente, filtradas pelo seu ID e ordenadas pela data de realização (`data_realizacao`) em ordem decrescente (`DESC`).
 
-populando as tabelas
+5.  **Exibição das Transações:**
+    * Utilizando um loop `FOR`, a procedure itera sobre o resultado da consulta de transações.
+    * Para cada transação, são exibidos os seguintes detalhes (também via mensagens de aviso):
+        * ID da transação
+        * Tipo (depósito ou retirada)
+        * Descrição
+        * Valor
+        * Data de realização
+
+## Estrutura do Repositório
+
+* `populate_challenge.sql`: Script SQL contendo os comandos `INSERT` para popular as tabelas `clients` e `transactions` com dados de exemplo.
+* `ver_extrato.sql`: Script SQL contendo a definição (`CREATE PROCEDURE`) da *stored procedure* `ver_extrato`.
+* `README.md`: Este arquivo.
+
+## Como Utilizar
+
+Para testar a solução, siga os passos abaixo:
+
+1.  **Inicializar o Ambiente:**
+    * Navegue até a pasta [`aula07`](https://github.com/ds-borges/data-engineering-roadmap/tree/main/Bootcamp-Intensivo-SQL/aula07) (que contém o `docker-compose.yml`).
+    * Execute o comando abaixo para iniciar o contêiner do banco de dados em segundo plano:
+    ```bash
+    docker-compose up -d
+    ```
+
+2.  **Configurar o Banco de Dados:**
+    * Conecte-se ao seu SGBD (Sistema de Gerenciamento de Banco de Dados) que foi iniciado pelo Docker.
+    * **Execute o script `populate_challenge.sql`** (presente nesta pasta `rinha`) para popular as tabelas necessárias.
+
+3.  **Criar a Stored Procedure:**
+    * Na mesma conexão, **execute o script `ver_extrato.sql`** (também presente nesta pasta) para compilar e armazenar a *stored procedure*.
+
+4.  **Executar a Procedure:**
+    * Para visualizar o extrato de um cliente (exemplo: cliente com UUID 'fbca0a69-3858-457a-88f9-0a20bdad36e1'), utilize o comando `CALL`:
+
+    ```sql
+    CALL ver_extrato('fbca0a69-3858-457a-88f9-0a20bdad36e1');
+    ```
