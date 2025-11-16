@@ -1,10 +1,4 @@
-CREATE TABLE employee_audit (
-    employee_id INT,
-    old_title VARCHAR,
-    new_title VARCHAR,
-    data_de_modificacao_do_salario TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
+--Trigger to register update in employee title
 CREATE OR REPLACE FUNCTION registrar_auditoria_titulo() returns trigger as
 $$
 BEGIN
@@ -18,3 +12,18 @@ CREATE TRIGGER trg_title_modificaded
 AFTER UPDATE OF title ON employees
 FOR EACH ROW
 EXECUTE FUNCTION registrar_auditoria_titulo();
+
+-- Procedure to help update
+CREATE OR REPLACE PROCEDURE employee_update(
+	IN p_employee_id INTEGER,
+	IN p_title VARCHAR
+)
+
+LANGUAGE plpgsql
+as $$
+BEGIN
+    update employees
+	set title = p_title
+	where employee_id = p_employee_id;
+END;
+$$;
