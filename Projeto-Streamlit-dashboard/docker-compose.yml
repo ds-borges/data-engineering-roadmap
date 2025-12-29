@@ -1,0 +1,19 @@
+services:
+
+  streamlit-financeiro:
+    build: .
+    ports:
+      - "8502:8501"
+    env_file:
+      - ./supabase.env
+    networks:
+      - rede_principal
+    restart: unless-stopped
+    mem_limit: 512m
+
+volumes:
+  streamlit_financeiro_data: {}
+
+networks:
+  rede_principal:
+    driver: bridge
