@@ -1,0 +1,59 @@
+[0m10:05:12.703298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6dc0d0ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6ddc891d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6db7fac10>]}
+
+
+============================== 10:05:12.748488 | cd87ffb0-85b3-42b3-8266-13009b432fd2 ==============================
+[0m10:05:12.748488 [info ] [MainThread]: Running with dbt=1.11.5
+[0m10:05:12.749070 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'target_path': 'None', 'profiles_dir': '/home/dsborges/.dbt', 'warn_error': 'None', 'invocation_command': 'dbt init', 'introspect': 'True', 'empty': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'printer_width': '80', 'use_experimental_parser': 'False', 'write_json': 'True', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'log_path': 'logs', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'cache_selected_only': 'False'}
+[0m10:50:40.478104 [debug] [MainThread]: Starter project path: /home/dsborges/jornada_de_dados/Bootcamp-DBT-Core/aula02/.venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m10:50:40.505070 [info ] [MainThread]:
+Your new dbt project "northwind" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:50:40.506546 [info ] [MainThread]: Setting up your profile.
+[0m10:57:27.971264 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 3134.578, "process_in_blocks": "20208", "process_kernel_time": 0.360657, "process_mem_max_rss": "125312", "process_out_blocks": "33768", "process_user_time": 3.558482}
+[0m10:57:27.979908 [debug] [MainThread]: Command `dbt init` succeeded at 10:57:27.979023 after 3134.59 seconds
+[0m10:57:27.985760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6db0d43e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6db0e1910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74b6db110050>]}
+[0m10:57:27.989519 [debug] [MainThread]: Flushing usage events
+[0m10:57:28.877950 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:57:36.149383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79f5677c8980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79f569390190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79f56672fc50>]}
+
+
+============================== 10:57:36.154799 | 8f49dc22-9714-4268-ae7b-d70cfe5278fe ==============================
+[0m10:57:36.154799 [info ] [MainThread]: Running with dbt=1.11.5
+[0m10:57:36.155404 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'invocation_command': 'dbt init', 'profiles_dir': '/home/dsborges/.dbt', 'log_format': 'default', 'static_parser': 'True', 'write_json': 'True', 'printer_width': '80', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'empty': 'None', 'version_check': 'True', 'target_path': 'None'}
+[0m10:57:58.135919 [debug] [MainThread]: Starter project path: /home/dsborges/jornada_de_dados/Bootcamp-DBT-Core/aula02/.venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m10:57:58.198979 [info ] [MainThread]:
+Your new dbt project "northwind_aws" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:57:58.202249 [info ] [MainThread]: Setting up your profile.
+[0m10:58:58.695764 [info ] [MainThread]: Profile northwind_aws written to /home/dsborges/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m10:58:58.711897 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 82.61234, "process_in_blocks": "72864", "process_kernel_time": 0.454726, "process_mem_max_rss": "104884", "process_out_blocks": "416", "process_user_time": 2.026324}
+[0m10:58:58.713502 [debug] [MainThread]: Command `dbt init` succeeded at 10:58:58.713148 after 82.62 seconds
+[0m10:58:58.714877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79f5666d9940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79f566ebaf90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79f5667bf240>]}
+[0m10:58:58.717655 [debug] [MainThread]: Flushing usage events
+[0m10:58:59.763381 [debug] [MainThread]: An error was encountered while trying to flush usage events
