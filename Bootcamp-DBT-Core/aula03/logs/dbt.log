@@ -1,0 +1,114 @@
+[0m10:28:07.312704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x717d77fd4ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x717d79be11d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x717d776eac10>]}
+
+
+============================== 10:28:07.365704 | 24b972aa-3493-4ab5-b10b-af03a607bd71 ==============================
+[0m10:28:07.365704 [info ] [MainThread]: Running with dbt=1.11.6
+[0m10:28:07.366354 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'debug': 'False', 'warn_error': 'None', 'target_path': 'None', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'no_print': 'None', 'use_colors': 'True', 'log_path': 'logs', 'indirect_selection': 'eager', 'printer_width': '80', 'write_json': 'True', 'partial_parse': 'True', 'empty': 'None', 'fail_fast': 'False', 'invocation_command': 'dbt init', 'cache_selected_only': 'False', 'version_check': 'True', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/home/dsborges/.dbt'}
+[0m10:28:40.502210 [debug] [MainThread]: Starter project path: /home/dsborges/jornada_de_dados/Bootcamp-DBT-Core/aula03/.venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m10:28:40.505761 [info ] [MainThread]:
+Your new dbt project "northwind_aws_northwind" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:28:40.506567 [info ] [MainThread]: Setting up your profile.
+[0m10:32:45.201990 [info ] [MainThread]: Profile northwind_aws_northwind written to /home/dsborges/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m10:32:45.207400 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 277.9956, "process_in_blocks": "19416", "process_kernel_time": 0.424495, "process_mem_max_rss": "125112", "process_out_blocks": "34112", "process_user_time": 4.048721}
+[0m10:32:45.209282 [debug] [MainThread]: Command `dbt init` succeeded at 10:32:45.208118 after 278.00 seconds
+[0m10:32:45.210074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x717d76fdafd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x717d776c4830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x717d77017350>]}
+[0m10:32:45.211090 [debug] [MainThread]: Flushing usage events
+[0m10:32:46.332517 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:32:54.720072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a85d9c4980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a85f58c190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a85c92fc50>]}
+
+
+============================== 10:32:54.724296 | 83682d35-ba40-4c47-8402-e7ada1b0e20f ==============================
+[0m10:32:54.724296 [info ] [MainThread]: Running with dbt=1.11.6
+[0m10:32:54.725109 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/home/dsborges/.dbt', 'target_path': 'None', 'introspect': 'True', 'fail_fast': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'use_colors': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None', 'quiet': 'False', 'indirect_selection': 'eager', 'debug': 'False', 'log_path': 'logs', 'partial_parse': 'True', 'version_check': 'True', 'printer_width': '80', 'invocation_command': 'dbt debug'}
+[0m10:32:54.740665 [info ] [MainThread]: dbt version: 1.11.6
+[0m10:32:54.742065 [info ] [MainThread]: python version: 3.13.7
+[0m10:32:54.743130 [info ] [MainThread]: python path: /home/dsborges/jornada_de_dados/Bootcamp-DBT-Core/aula03/.venv/bin/python
+[0m10:32:54.744677 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m10:32:54.815099 [info ] [MainThread]: Using profiles dir at /home/dsborges/.dbt
+[0m10:32:54.815672 [info ] [MainThread]: Using profiles.yml file at /home/dsborges/.dbt/profiles.yml
+[0m10:32:54.816174 [info ] [MainThread]: Using dbt_project.yml file at /home/dsborges/jornada_de_dados/Bootcamp-DBT-Core/aula03/dbt_project.yml
+[0m10:32:54.816769 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m10:32:54.818127 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.17759736, "process_in_blocks": "0", "process_kernel_time": 0.175467, "process_mem_max_rss": "104656", "process_out_blocks": "72", "process_user_time": 1.76664}
+[0m10:32:54.818676 [debug] [MainThread]: Command `dbt debug` failed at 10:32:54.818510 after 0.18 seconds
+[0m10:32:54.819320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a85c842060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a85c8bbd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a85c8f0050>]}
+[0m10:32:54.819852 [debug] [MainThread]: Flushing usage events
+[0m10:32:55.665031 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:34:07.056032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db7e74b8980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db7e8f8c190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db7e661fc50>]}
+
+
+============================== 10:34:07.060610 | 2222b5f1-8c09-4561-8119-ead4e5ab9cc2 ==============================
+[0m10:34:07.060610 [info ] [MainThread]: Running with dbt=1.11.6
+[0m10:34:07.061318 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'fail_fast': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'empty': 'None', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'no_print': 'None', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'log_path': 'logs', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'partial_parse': 'True', 'printer_width': '80', 'static_parser': 'True', 'target_path': 'None', 'profiles_dir': '/home/dsborges/.dbt', 'log_format': 'default', 'introspect': 'True'}
+[0m10:34:07.072153 [info ] [MainThread]: dbt version: 1.11.6
+[0m10:34:07.072784 [info ] [MainThread]: python version: 3.13.7
+[0m10:34:07.073140 [info ] [MainThread]: python path: /home/dsborges/jornada_de_dados/Bootcamp-DBT-Core/aula03/.venv/bin/python
+[0m10:34:07.073453 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m10:34:07.142086 [info ] [MainThread]: Using profiles dir at /home/dsborges/.dbt
+[0m10:34:07.142678 [info ] [MainThread]: Using profiles.yml file at /home/dsborges/.dbt/profiles.yml
+[0m10:34:07.143461 [info ] [MainThread]: Using dbt_project.yml file at /home/dsborges/jornada_de_dados/Bootcamp-DBT-Core/aula03/dbt_project.yml
+[0m10:34:07.143958 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m10:34:07.145221 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.15966105, "process_in_blocks": "0", "process_kernel_time": 0.218936, "process_mem_max_rss": "104844", "process_out_blocks": "16", "process_user_time": 1.66474}
+[0m10:34:07.145773 [debug] [MainThread]: Command `dbt debug` failed at 10:34:07.145649 after 0.16 seconds
+[0m10:34:07.146215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db7e632df30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db7e63afd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db7e63ec050>]}
+[0m10:34:07.146670 [debug] [MainThread]: Flushing usage events
+[0m10:34:08.201746 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:37:19.052735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d85265e8980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d8528224190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d8525553c50>]}
+
+
+============================== 10:37:19.067753 | c7cf4d1b-c8ff-4d75-b1b3-ed12c13b2ac5 ==============================
+[0m10:37:19.067753 [info ] [MainThread]: Running with dbt=1.11.6
+[0m10:37:19.069527 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/home/dsborges/.dbt', 'cache_selected_only': 'False', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'partial_parse': 'True', 'fail_fast': 'False', 'write_json': 'True', 'no_print': 'None', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'empty': 'None', 'static_parser': 'True', 'printer_width': '80', 'warn_error': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_format': 'default', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True'}
+[0m10:37:19.179891 [info ] [MainThread]: dbt version: 1.11.6
+[0m10:37:19.180517 [info ] [MainThread]: python version: 3.13.7
+[0m10:37:19.180909 [info ] [MainThread]: python path: /home/dsborges/jornada_de_dados/Bootcamp-DBT-Core/aula03/.venv/bin/python
+[0m10:37:19.181256 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m10:37:19.315322 [info ] [MainThread]: Using profiles dir at /home/dsborges/.dbt
+[0m10:37:19.315974 [info ] [MainThread]: Using profiles.yml file at /home/dsborges/.dbt/profiles.yml
+[0m10:37:19.317082 [info ] [MainThread]: Using dbt_project.yml file at /home/dsborges/jornada_de_dados/Bootcamp-DBT-Core/aula03/dbt_project.yml
+[0m10:37:19.318093 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m10:37:19.323130 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.34171927, "process_in_blocks": "97192", "process_kernel_time": 0.323933, "process_mem_max_rss": "104332", "process_out_blocks": "8", "process_user_time": 1.863615}
+[0m10:37:19.324778 [debug] [MainThread]: Command `dbt debug` failed at 10:37:19.324496 after 0.34 seconds
+[0m10:37:19.325396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d8525461f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d85254dfd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d85255cb570>]}
+[0m10:37:19.326040 [debug] [MainThread]: Flushing usage events
+[0m10:37:20.515567 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:37:55.162441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7622596e8980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76225b068190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x762258653c50>]}
+
+
+============================== 10:37:55.166391 | e188a775-5a47-446c-98c3-fc852da25b50 ==============================
+[0m10:37:55.166391 [info ] [MainThread]: Running with dbt=1.11.6
+[0m10:37:55.167566 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'quiet': 'False', 'log_cache_events': 'False', 'target_path': 'None', 'profiles_dir': '/home/dsborges/.dbt', 'use_experimental_parser': 'False', 'introspect': 'True', 'printer_width': '80', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'partial_parse': 'True', 'version_check': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'no_print': 'None', 'fail_fast': 'False', 'write_json': 'True', 'log_path': 'logs', 'static_parser': 'True', 'warn_error': 'None'}
+[0m10:37:55.183492 [info ] [MainThread]: dbt version: 1.11.6
+[0m10:37:55.184815 [info ] [MainThread]: python version: 3.13.7
+[0m10:37:55.185626 [info ] [MainThread]: python path: /home/dsborges/jornada_de_dados/Bootcamp-DBT-Core/aula03/.venv/bin/python
+[0m10:37:55.186350 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m10:37:55.260621 [info ] [MainThread]: Using profiles dir at /home/dsborges/.dbt
+[0m10:37:55.261173 [info ] [MainThread]: Using profiles.yml file at /home/dsborges/.dbt/profiles.yml
+[0m10:37:55.262008 [info ] [MainThread]: Using dbt_project.yml file at /home/dsborges/jornada_de_dados/Bootcamp-DBT-Core/aula03/dbt_project.yml
+[0m10:37:55.262689 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m10:37:55.264141 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.1722412, "process_in_blocks": "0", "process_kernel_time": 0.163887, "process_mem_max_rss": "104664", "process_out_blocks": "8", "process_user_time": 1.57892}
+[0m10:37:55.264733 [debug] [MainThread]: Command `dbt debug` failed at 10:37:55.264611 after 0.17 seconds
+[0m10:37:55.265140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x762258561f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7622585dfd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7622586cb570>]}
+[0m10:37:55.265621 [debug] [MainThread]: Flushing usage events
+[0m10:37:56.245607 [debug] [MainThread]: An error was encountered while trying to flush usage events
