@@ -2,28 +2,34 @@ version: 2
 
 models:
   - name: mart_orders_summary
+    description: "Este modelo consolida o resumo de vendas por pedido, incluindo informações do cliente, status e valores totais, servindo como fonte principal para dashboards de vendas."
     columns:
       - name: order_id
+        description: "Identificador único do pedido."
         data_tests:
           - not_null
           - unique
       - name: customer_id
+        description: "Identificador único do cliente que realizou o pedido."
         data_tests:
           - not_null
           - relationships:
               to: ref('stg_customers')
               field: customer_id
       - name: customer_name
+        description: "Nome completo do cliente."
         data_tests:
           - not_null
       - name: order_status
+        description: "Status atual do pedido (ex: Shipped, Ordered, etc)."
         data_tests:
           - not_null
       - name: total_sales
+        description: "Valor total da venda para este registro."
         data_tests:
           - not_null
       - name: total_orders
-        data_type: boolean
+        description: "Contagem de pedidos associados a este registro (geralmente 1 por ID de pedido)."
         data_tests:
           - not_null
           - dbt_expectations.expect_column_values_to_be_in_type_list:
