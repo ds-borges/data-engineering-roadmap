@@ -1,0 +1,5 @@
+packages:
+  - package: dbt-labs/dbt_utils
+    version: 1.3.3
+  - package: calogica/dbt_expectations # Adicione esta linha
+    version: 0.10.4 # Versão compatível com dbt 1.11

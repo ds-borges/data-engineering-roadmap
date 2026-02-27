@@ -1,0 +1,6 @@
+[0m19:25:40.919270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c61257d0ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c61273211d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c6124eeec10>]}
+
+
+============================== 19:25:41.006084 | 97c212bd-666e-4c65-acac-f7ee104b9a74 ==============================
+[0m19:25:41.006084 [info ] [MainThread]: Running with dbt=1.11.6
+[0m19:25:41.007635 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'cache_selected_only': 'False', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'log_cache_events': 'False', 'log_path': 'logs', 'indirect_selection': 'eager', 'empty': 'None', 'use_experimental_parser': 'False', 'profiles_dir': '/home/dsborges/.dbt', 'printer_width': '80', 'version_check': 'True', 'static_parser': 'True', 'introspect': 'True', 'quiet': 'False', 'fail_fast': 'False', 'invocation_command': 'dbt init', 'warn_error': 'None', 'log_format': 'default', 'write_json': 'True', 'use_colors': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
